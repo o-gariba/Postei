@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Modal from './Modal'
-import ModalPost from "./ModalPost";
+// import ModalPost from "./ModalPost";
 
 class Dashboard extends Component {
 
@@ -9,7 +9,6 @@ class Dashboard extends Component {
         this.state = {
             show: false
         }
-
         this.showModal = this.showModal.bind(this)
         this.hideModal = this.hideModal.bind(this)
     }
@@ -30,7 +29,32 @@ class Dashboard extends Component {
                 </button>
 
                 <Modal show={this.state.show} handleClose={this.hideModal}>
-                    <ModalPost />
+                    <form onSubmit={e => {
+                        e.preventDefault()
+                        e.stopPropagation()
+                    }}>
+                        <label >Img de perfil</label>
+                        <input type="text" placeholder="Ex: https://minhaimagem.com"
+                            onChange={(dado) => {
+                                // setImgAvatar(dado.target.value)
+                            }}
+                        />
+
+                        <label >Seu @</label>
+                        <input type="text" placeholder="seu_nome123"
+                            onChange={(dado) => {
+                                // setNomeUser(dado.target.value)
+                            }}
+                        />
+
+                        <label >Post</label>
+                        <input type="text" placeholder="Ex: https://minhaimagem.com"
+                            // onChange={(dado) => setPost(dado.target.value)}
+                        />
+
+                        <button type="submit" onClick={this.hideModal}>Postar</button>
+                        <button onClick={this.hideModal}>Sair</button>
+                    </form>
                 </Modal>
             </main>
         )
