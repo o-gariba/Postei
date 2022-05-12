@@ -29,21 +29,6 @@ const DashboardFunction = ({ childToParent, criarPost }) => {
         setModalAberto(false)
     }
 
-    // let postagem = {}
-
-    // const mostraPost = () => {
-    //     console.log('enviando dados...')
-
-    //     postagem = {
-    //         imgAvatar,
-    //         nomeUser,
-    //         post,
-    //     }
-
-    //     console.log(postagem)
-    // }
-
-    // const data = ''
 
     return (
         <main>

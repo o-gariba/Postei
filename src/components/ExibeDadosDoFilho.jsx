@@ -12,16 +12,6 @@ const ExibeDadosDoFilho = ({ posts }) => {
                         </li>
                     )
                 })}
-                <li>
-                    <h1>teste</h1>
-                    <h2>teste</h2>
-                    <h3>teste</h3>
-                </li>
-                <li>
-                    <h1>teste</h1>
-                    <h2>teste</h2>
-                    <h3>teste</h3>
-                </li>
             </ul>
         </>
     )
